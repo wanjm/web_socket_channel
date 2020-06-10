@@ -29,6 +29,7 @@ class WebSocketChannel extends StreamChannelMixin {
   /// This is essentially a copy of `dart:io`'s WebSocket implementation, with
   /// the IO-specific pieces factored out.
   final WebSocketImpl _webSocket;
+  Future get ready=>Future.value(false);
 
   /// The subprotocol selected by the server.
   ///
